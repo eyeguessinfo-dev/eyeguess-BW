@@ -23,7 +23,7 @@ export default function ValueProposition() {
             transition={{ delay: 0.2, duration: 0.8 }}
             className="text-4xl md:text-5xl font-bold mb-8"
           >
-            Value-Based Support That Scales With You
+            Value-Based Creativity That Scales With You
           </motion.h2>
           
           <motion.p
