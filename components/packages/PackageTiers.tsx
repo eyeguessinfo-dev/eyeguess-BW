@@ -17,7 +17,7 @@ const packages = [
       "Standard response time (24-48 hours)",
       "Resource library access",
       "Community Meetings",
-      "Monthly Studio Photo Shoot"
+      "Monthly Studio Photo Shoot *Limited Time Offer*"
     ],
     cta: "Select Value-Based Support",
     stripeLink: "https://buy.stripe.com/14A3cwbUg8xZ88b47D9IQ00"
