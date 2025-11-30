@@ -159,6 +159,45 @@ export default function EnhancedPackageCard({ pkg, index }: EnhancedPackageCardP
             </span>
           </div>
         )}
+
+        {/* Limited Time Badge for Value-Based Support */}
+{pkg.name === "Value-Based Support" && !pkg.featured && (
+  <motion.div
+    initial={{ opacity: 0, scale: 0, rotateY: 180 }}
+    animate={{ opacity: 1, scale: 1, rotateY: 0 }}
+    transition={{ delay: 0.6, type: "spring", stiffness: 300 }}
+    className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10"
+  >
+    <motion.div
+      animate={{ y: [0, -8, 0] }}
+      transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+      className="relative"
+    >
+      {/* Shadow for depth */}
+      <div className="absolute inset-0 bg-gray-800 rounded-full blur-md transform translate-y-1 -z-10" />
+      
+      {/* Main metallic badge */}
+      <div className="relative bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 text-gray-900 px-5 py-2 rounded-full text-sm font-bold whitespace-nowrap border-2 border-gray-100 shadow-2xl">
+        {/* Inner shine */}
+        <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-white/40 to-transparent rounded-l-full" />
+        
+        {/* Reflective spots */}
+        <div className="absolute top-1 right-4 w-2 h-2 bg-white/90 rounded-full blur-[1px]" />
+        <div className="absolute bottom-1 left-4 w-1 h-1 bg-white/70 rounded-full" />
+        
+        <span className="relative z-10 drop-shadow-sm flex items-center gap-1">
+          <motion.span
+            animate={{ rotate: [0, 15, 0, -15, 0] }}
+            transition={{ duration: 2, repeat: Infinity, delay: 1 }}
+          >
+            ✨
+          </motion.span>
+          Limited Time Only
+        </span>
+      </div>
+    </motion.div>
+  </motion.div>
+)}
         
         <div className="text-center mb-8">
           <h3 className="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-4">
@@ -295,7 +334,7 @@ export default function EnhancedPackageCard({ pkg, index }: EnhancedPackageCardP
                             </li>
                             <li className="flex items-start gap-2">
                               <span className="text-purple-400 mt-1">•</span>
-                              <span><strong>Session Length:</strong> 1 to 1.5 hours of shooting time</span>
+                              <span><strong>Session Length:</strong> 1 hour of shooting time</span>
                             </li>
                             <li className="flex items-start gap-2">
                               <span className="text-purple-400 mt-1">•</span>
